@@ -6,18 +6,19 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<header>
-    <h1>AvisRoyale</h1>
-</header>
+<div th:include="entete"></div>
 <main>
-    <div class="content">
-        <h2>Bienvenue dans AvisRoyale</h2>
-        <p>Un site web qui permet de donner des avis sur les cartes de Clash Royale, de commenter les avis des autres et de discuter entre utilisateur.</p>
-        <button>Connexion</button>
+    <div class="content" style="background-image: url('/images/BackgroundMenuPrincipale.jpg');">
+        <h1>Bienvenue dans AvisRoyale</h1>
+        <p>Ce site est un réseau-social qui vous permet de donner notre avis sur les cartes de clash
+            royale. Chaque utilisateur peut donner un commentaire sur l'avis que vous avez donné lancant
+            ainsi une discussion sur l'avis. Il y a aussi un système de messagerie qui va permettre à
+            chaque utilisateur de texter les autres utilisateur pour parler des cartes ou d'autres sujets
+            qui leurs plaient. Soyez polie avec les autres et amusez vous!
+        </p>
+        <button title="Cliquer pour aller vers la page de connexion.">Connexion</button>
     </div>
 </main>
-<footer>
-    AvisRoyale.
-</footer>
+<div th:include="pied"></div>
 </body>
 </html>

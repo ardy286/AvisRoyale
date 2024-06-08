@@ -1,46 +1,130 @@
+@font-face {
+    font-family: 'Apple-Garamond';
+    src:url('Apple-Garamond.ttf.woff') format('woff'),
+    url('Apple-Garamond.ttf.svg#Apple-Garamond') format('svg'),
+    url('Apple-Garamond.ttf.eot'),
+    url('Apple-Garamond.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 html {
-            height: 100%;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            height: 100%;
-            min-height: 100%;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            background-color: #800080;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #ffffff;
-        }
-        .content {
-            padding: 20px;
-            background-color: #fff;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex-grow: 1; /* Pour que le contenu prenne tout l'espace disponible */
-        }
-        footer {
-            background-color: #800080;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        main {
-            flex-grow: 1; /* Pour que le main prenne tout l'espace disponible entre le header et le footer */
-            display: flex;
-        }
+    height: 100%;
+}
 
-        button{
-            background-color: #D8BFD8;
-            height: 40px;
-            width: 80px;
-            border-radius: 7px;
-        }
+body {
+    font-family: 'Apple-Garamond';
+    background-color: #f8f6f6;
+    margin: 0;
+    padding: 5px 20px 5px 20px;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #1c1c1c;
+}
+
+header img{height: 65px}
+header div{
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+header div a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+header div a:last-child{
+    color: red;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 10px #1c1c1c;
+    flex-grow: 1; /* Pour que le contenu prenne tout l'espace disponible */
+    position: relative; /* Position relative pour l'élément avant */
+    color: white; /* Couleur du texte en blanc pour un meilleur contraste */
+}
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Ombre semi-transparente noire */
+    border-radius: inherit; /* Pour correspondre aux coins arrondis de .content */
+    z-index: 1; /* Positionner l'élément derrière le texte */
+}
+.content > * {
+    position: relative;
+    z-index: 2; /* Positionner le texte au-dessus de l'ombre */
+}
+
+.content p{
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 20px;
+}
+
+.content h1{color: white}
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #1c1c1c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer p{height: 8px}
+
+footer div{
+    height: 8px;
+}
+
+footer div a{
+    color: dodgerblue;
+    text-decoration: none;
+}
+main {
+    flex-grow: 1; /* Pour que le main prenne tout l'espace disponible entre le header et le footer */
+    display: flex;
+}
+
+button{
+    background-color: dodgerblue;
+    font-family: 'Apple-Garamond';
+    border: darkgray 1px solid;
+    font-size: 17px;
+    height: 40px;
+    border-radius: 7px;
+    box-shadow: 0 0 3px #1c1c1c;
+}
+
+button:hover{
+    background-color: #FF8D1E;
+    box-shadow: 0 0 3px white;
+}
+
+button:active{background-color: dodgerblue;}
