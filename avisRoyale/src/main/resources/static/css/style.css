@@ -107,9 +107,79 @@ footer div a{
     color: dodgerblue;
     text-decoration: none;
 }
+
+.connexionUtilisateur{
+    padding: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px #1c1c1c;
+    flex-grow: 1;
+    position: relative;
+    color: white;
+}
+
+.connexionUtilisateur h1{
+    color: black;
+}
+
+.connexionUtilisateur .forms {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.connexionUtilisateur a{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: dodgerblue;
+    font-size: 18px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 10px #1c1c1c;
+    padding: 10px;
+    width: 19%;
+    height: 105%;
+    background: white;
+    border-radius: 10px;
+    color: black;
+}
+
+form input{
+    height: 30px;
+}
+
+
+form label{
+    text-align: left;
+}
+
+form p{
+    font-size: 25px;
+    height: 5px;
+}
+
+form button{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
 main {
     flex-grow: 1; /* Pour que le main prenne tout l'espace disponible entre le header et le footer */
     display: flex;
+    position: relative;
 }
 
 button{
