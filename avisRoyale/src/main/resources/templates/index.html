@@ -16,7 +16,9 @@
             chaque utilisateur de texter les autres utilisateur pour parler des cartes ou d'autres sujets
             qui leurs plaient. Soyez polie avec les autres et amusez vous!
         </p>
-        <button title="Cliquer pour aller vers la page de connexion.">Connexion</button>
+        <a th:href="@{/ConnexionUtilisateur}">
+            <button title="Cliquer pour aller vers la page de connexion.">Connexion</button>
+        </a>
     </div>
 </main>
 <div th:include="pied"></div>

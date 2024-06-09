@@ -6,6 +6,24 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+<div th:include="entete"></div>
+<main>
+    <div class="connexionUtilisateur">
+        <h1>Connexion administrateur</h1>
+        <div class="forms">
+            <form>
+                <p>Se connecter</p>
+                <label>Clé:</label>
+                <input type="text" placeholder="Clé">
+                <label>Mot de passe:</label>
+                <input type="password" placeholder="Mot de passe">
+                <button title="Se connecter.">Connexion</button>
+            </form>
+        </div>
+        <a th:href="@{/ConnexionUtilisateur}" title="Page de connexion utilisateur.">Retour dans connexion utilisateur</a>
+    </div>
+</main>
 
+<div th:include="pied"></div>
 </body>
 </html>
