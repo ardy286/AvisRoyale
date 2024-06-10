@@ -2,8 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Page administrateur</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css}" >
 </head>
 <body>
 <div th:include="entete"></div>
@@ -20,7 +21,7 @@
                 <button title="Se connecter.">Connexion</button>
             </form>
         </div>
-        <a th:href="@{/ConnexionUtilisateur}" title="Page de connexion utilisateur.">Retour dans connexion utilisateur</a>
+        <a th:href="@{/ConnexionUtilisateur}" title="Page de connexion utilisateur."><i class="fa-solid fa-left-long"></i> Retour dans connexion utilisateur</a>
     </div>
 </main>
 
