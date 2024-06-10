@@ -143,7 +143,7 @@ footer div a{
     font-size: 18px;
 }
 
-form{
+.forms form{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -156,7 +156,11 @@ form{
     color: black;
 }
 
-form input{
+.forms form input{
+    height: 30px;
+}
+
+.user-search-form input{
     height: 30px;
 }
 
@@ -186,7 +190,7 @@ form input{
     font-size: 22px;
 }
 
-.backEndUtilisateur div{
+.selectionUtilisateur{
     padding: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -196,17 +200,49 @@ form input{
     background-color: white;
     width: 90%;
     border-radius: 10px;
-    display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.backEndUtilisateur section h1{
+    text-align: center;
+    position: relative;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+}
+
+.sectionScrollable{
     overflow-y: auto;
+    position: relative;
+    padding-top: 15px;
+    max-height: 600px;
+    height: 600px;
+    margin: 0;
 }
 
 .listeUtilisateur {
-    padding: 0;
-    margin: 0;
-    width: 120%;
+    background-color: white;
+    box-shadow: 0 0 10px #1c1c1c;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 15px;
+    position: relative;
+    height: 15%;
+    border-radius: 15px;
 }
 
+.listeUtilisateur div{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    height: 100%;
+}
+
+.listeUtilisateur div a{
+    color: dodgerblue;
+}
 
 .navSelectionne{
     background-color: #E1931E;
@@ -227,16 +263,16 @@ form input{
     height: 30px;
 }
 
-form label{
+.forms form label{
     text-align: left;
 }
 
-form p{
+.forms form p{
     font-size: 25px;
     height: 5px;
 }
 
-form button{
+.forms form button{
     width: 40%;
     display: block;
     margin: 0 auto;
@@ -264,3 +300,21 @@ button:hover{
 }
 
 button:active{background-color: dodgerblue;}
+
+.user-search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.user-search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
