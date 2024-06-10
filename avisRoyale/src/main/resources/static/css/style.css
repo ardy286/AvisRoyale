@@ -160,6 +160,62 @@ form input{
     height: 30px;
 }
 
+.backEndUtilisateur{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.backEndUtilisateur nav{
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px #1c1c1c;
+    flex-grow: 1; /* Pour que le contenu prenne tout l'espace disponible */
+    position: relative; /* Position relative pour l'élément avant */
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    gap: 20px;
+    background-image: linear-gradient(to bottom, #1E6CE1 ,yellow);
+    color: white;
+    font-size: 22px;
+}
+
+.backEndUtilisateur div{
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px #1c1c1c;
+    flex-grow: 1; /* Pour que le contenu prenne tout l'espace disponible */
+    position: relative; /* Position relative pour l'élément avant */
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.navSelectionne{
+    background-color: #E1931E;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.backEndUtilisateur nav a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+}
+.backEndUtilisateur nav a i{
+    width: 30px;
+    height: 30px;
+}
 
 form label{
     text-align: left;
