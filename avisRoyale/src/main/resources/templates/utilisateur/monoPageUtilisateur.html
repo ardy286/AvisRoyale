@@ -61,21 +61,50 @@
 <!--            </div>-->
 <!--        </section>-->
 
+<!--        <section class="selectionUtilisateur">-->
+<!--            <h1>Evoyer un message à:</h1>-->
+<!--            <form class="user-search-form">-->
+<!--                <input type="text" placeholder="Rechercher un utilisateur">-->
+<!--                <button type="submit">Rechercher</button>-->
+<!--            </form>-->
+<!--            <div class="sectionScrollable">-->
+<!--                <div class="listeUtilisateur">-->
+<!--                    <div>-->
+<!--                        <p>Nom et prénom</p>-->
+<!--                        <a href=""><i class="fa-regular fa-message"></i></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
         <section class="selectionUtilisateur">
-            <h1>Evoyer un message à:</h1>
+            <h1>Mes cartes</h1>
             <form class="user-search-form">
                 <input type="text" placeholder="Rechercher un utilisateur">
                 <button type="submit">Rechercher</button>
             </form>
             <div class="sectionScrollable">
-                <div class="listeUtilisateur">
-                    <div>
-                        <p>Nom et prénom</p>
-                        <a href=""><i class="fa-regular fa-message"></i></a>
+                <div class="listeCartes">
+                    <div class="carte">
+                        <img th:src="@{/images/logoCr.jpeg}" alt="Photo de la carte">
+                        <div class="carte-info">
+                            <h3>Nom de la carte</h3>
+                            <p>Type de carte</p>
+                        </div>
+                    </div>
+                    <!-- Répétez les éléments de la carte pour chaque carte -->
+                    <div class="carte">
+                        <img th:src="@{/images/logoCr.jpeg}" alt="Photo de la carte">
+                        <div class="carte-info">
+                            <h3>Nom de la carte</h3>
+                            <p>Type de carte</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
     </div>
 </main>
 
