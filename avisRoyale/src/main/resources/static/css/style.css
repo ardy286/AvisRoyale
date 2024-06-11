@@ -240,6 +240,54 @@ footer div a{
     height: 100%;
 }
 
+.listeUtilisateur:hover{transform: scale(1.05);}
+
+.listeCartes {
+    display: flex;
+    flex-wrap: wrap; /* Pour que les cartes s'affichent les unes à côté des autres et reviennent à la ligne si nécessaire */
+    gap: 20px;
+    justify-content: center; /* Centre les cartes dans la section */
+}
+
+.carte {
+    width: 200px; /* Largeur de la carte */
+    height: 300px; /* Hauteur de la carte */
+    display: flex;
+    flex-direction: column; /* Aligne l'image et les infos de la carte verticalement */
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 10px #1c1c1c;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center; /* Centre le texte */
+}
+
+.carte:hover{transform: scale(1.05);}
+
+.carte img {
+    width: 100%; /* L'image prend toute la largeur de la carte */
+    height: auto; /* Laisse le navigateur déterminer la hauteur de l'image pour conserver les proportions */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Espace entre l'image et les infos */
+}
+
+.carte-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.carte-info h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.carte-info p {
+    margin: 0;
+    color: gray;
+    font-size: 16px;
+}
+
 .listeUtilisateur div a{
     color: dodgerblue;
 }
@@ -247,7 +295,15 @@ footer div a{
 .navSelectionne{
     background-color: #E1931E;
     border-radius: 8px;
-    padding: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.backEndUtilisateur nav a:hover{
+    background-color: #E1931E;
+    border-radius: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .backEndUtilisateur nav a{
