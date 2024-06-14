@@ -449,7 +449,8 @@ button:active{background-color: dodgerblue;}
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    height: 513px;
+    height: 514px;
+    overflow-y: auto;
 }
 
 .division-modal{
@@ -469,4 +470,13 @@ button:active{background-color: dodgerblue;}
     height: 200px;
     max-height: 200px;
     min-height: 200px;
+    overflow-y: auto;
+}
+
+.division-detail{
+    display: flex;
+}
+
+.detail{
+    margin-left: 10px;
 }
