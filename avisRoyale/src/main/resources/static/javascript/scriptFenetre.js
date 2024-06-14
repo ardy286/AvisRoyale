@@ -8,7 +8,7 @@ function openModal(element) {
     const details = element.getAttribute('data-details');
 
     // Set the modal content with the retrieved data
-    document.getElementById('modal-image').src = image;
+    //document.getElementById('modal-image').src = image;
     document.getElementById('modal-name').textContent = name;
     document.getElementById('modal-type').textContent = type;
     document.getElementById('modal-details').textContent = details;
