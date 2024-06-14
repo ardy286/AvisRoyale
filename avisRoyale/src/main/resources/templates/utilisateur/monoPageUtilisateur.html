@@ -113,24 +113,35 @@
 <div class="modal" id="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img id="modal-image" src="" alt="Image de la carte">
-        <div class="carte-details">
-            <h2 id="modal-name"></h2>
-            <p id="modal-type"></p>
-            <p id="modal-details"></p>
-        </div>
-        <div class="add-comment">
-            <h3>Ajouter un commentaire</h3>
-            <textarea placeholder="Écrire un commentaire..."></textarea>
-            <button>Commenter</button>
-        </div>
-        <div class="comments-section">
-            <h3>Réponses</h3>
-            <!-- Example response -->
-            <div class="response">
-                <p><strong>Utilisateur:</strong> Réponse...</p>
+        <div class="division-modal">
+            <div class="partie-modal">
+                <img id="modal-image" th:src="@{/images/logoCr.jpeg}" alt="Image de la carte">
+                <div class="carte-details">
+                    <h2 id="modal-name"></h2>
+                    <p id="modal-type"></p>
+                    <p>Rareté de carte</p>
+                    <p id="modal-details"></p>
+                </div>
+                <div class="add-comment">
+                    <h3>Ajouter votre avis:</h3>
+                    <textarea placeholder="Écrire l'avis..."></textarea>
+                    <button>Ajouter</button>
+                </div>
             </div>
-            <!-- Add more responses as needed -->
+            <div class="partie-modal">
+                <div class="comments-section">
+                    <h3>Commentaire:</h3>
+                    <!-- Example response -->
+                    <div class="response">
+                        <p><strong>Utilisateur:</strong> Commentaire...</p>
+                    </div>
+                    <!-- Add more responses as needed -->
+                    <form class="add-Comment">
+                        <input type="text" placeholder="Ajouter commentaire">
+                        <button type="submit"  title="Cliquer pour ajouter commentaire.">Commenter</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
