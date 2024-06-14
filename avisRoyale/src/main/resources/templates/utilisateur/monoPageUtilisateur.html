@@ -115,12 +115,20 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="division-modal">
             <div class="partie-modal">
-                <img id="modal-image" th:src="@{/images/logoCr.jpeg}" alt="Image de la carte">
-                <div class="carte-details">
-                    <h2 id="modal-name"></h2>
-                    <p id="modal-type"></p>
-                    <p>Rareté de carte</p>
-                    <p id="modal-details"></p>
+                <div class="division-detail">
+                    <div>
+                        <img id="modal-image" th:src="@{/images/logoCr.jpeg}" alt="Image de la carte">
+                        <div class="carte-details">
+                            <h2 id="modal-name"></h2>
+                            <p id="modal-type"></p>
+                            <p>Rareté de carte
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <h3>Détail:</h3>
+                        <p id="modal-details"></p>
+                    </div>
                 </div>
                 <div class="add-comment">
                     <h3>Ajouter votre avis:</h3>
