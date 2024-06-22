@@ -77,8 +77,37 @@
 <!--            </div>-->
 <!--        </section>-->
 
+<!--        <section class="selectionUtilisateur">-->
+<!--            <h1>Mes cartes</h1>-->
+<!--            <form class="user-search-form">-->
+<!--                <input type="text" placeholder="Rechercher une carte">-->
+<!--                <button type="submit"  title="Cliquer pour trouver la carte.">Rechercher</button>-->
+<!--            </form>-->
+<!--            <div class="sectionScrollable">-->
+<!--                <div class="listeCartes">-->
+<!--                    <div class="carte" title="Cliquer pour voir la carte.">-->
+<!--                        <img th:src="@{/images/logoCr.jpeg}" alt="Photo de la carte">-->
+<!--                        <div class="carte-info">-->
+<!--                            <h3>Nom de la carte</h3>-->
+<!--                            <p>Type de carte</p>-->
+<!--                            <p>Rareté de carte</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Répétez les éléments de la carte pour chaque carte &ndash;&gt;-->
+<!--                    <div class="carte" title="Cliquer pour voir la carte." data-id="1" data-name="Nom de la Carte 1" data-type="Type de Carte 1" data-image="/images/logoCr.jpeg" data-details="Détails de la carte 1" onclick="openModal(this)">-->
+<!--                        <img th:src="@{/images/logoCr.jpeg}" alt="Photo de la carte">-->
+<!--                        <div class="carte-info">-->
+<!--                            <h3>Nom de la carte</h3>-->
+<!--                            <p>Type de carte</p>-->
+<!--                            <p>Rareté de carte</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
         <section class="selectionUtilisateur">
-            <h1>Mes cartes</h1>
+            <h1>Les cartes de X Y</h1>
             <form class="user-search-form">
                 <input type="text" placeholder="Rechercher une carte">
                 <button type="submit"  title="Cliquer pour trouver la carte.">Rechercher</button>
@@ -94,7 +123,7 @@
                         </div>
                     </div>
                     <!-- Répétez les éléments de la carte pour chaque carte -->
-                    <div class="carte" title="Cliquer pour voir la carte." id="1" onclick="openModal();LoadCommentaire(this)">
+                    <div class="carte" title="Cliquer pour voir la carte." data-id="1" data-name="Nom de la Carte 1" data-type="Type de Carte 1" data-image="/images/logoCr.jpeg" data-details="Détails de la carte 1" onclick="openModal(this)">
                         <img th:src="@{/images/logoCr.jpeg}" alt="Photo de la carte">
                         <div class="carte-info">
                             <h3>Nom de la carte</h3>
@@ -106,11 +135,51 @@
             </div>
         </section>
 
-
     </div>
 </main>
 
 <div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="division-modal">
+            <div class="partie-modal">
+                <div class="division-detail">
+                    <div>
+                        <img id="modal-image" src="/images/logoCr.jpeg" alt="Image de la carte">
+                        <div class="carte-details">
+                            <h2 id="modal-name"></h2>
+                            <p id="modal-type"></p>
+                            <p>Rareté de carte</p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <h3>Détail:</h3>
+                        <p id="modal-details"></p>
+                    </div>
+                </div>
+                <div class="add-comment">
+                    <h3>Ajouter votre avis:</h3>
+                    <textarea placeholder="Écrire l'avis..."></textarea>
+                    <button>Ajouter</button>
+                </div>
+            </div>
+            <div class="partie-modal">
+                <div class="comments-section">
+                    <h3>Commentaire:</h3>
+                    <!-- Example response -->
+                    <div class="response">
+                        <p><strong>Utilisateur:</strong> Commentaire...</p>
+                    </div>
+                    <!-- Add more responses as needed -->
+                    <form class="add-Comment">
+                        <input type="text" placeholder="Ajouter commentaire">
+                        <button type="submit" title="Cliquer pour ajouter commentaire.">Commenter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 
