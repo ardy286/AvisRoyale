@@ -1,18 +1,5 @@
 // Function to open the modal and fill it with the card's data
-function openModal(element) {
-    // Retrieve data attributes from the clicked element
-    const id = element.getAttribute('data-id');
-    const name = element.getAttribute('data-name');
-    const type = element.getAttribute('data-type');
-    const image = element.getAttribute('data-image');
-    const details = element.getAttribute('data-details');
-
-    // Set the modal content with the retrieved data
-    //document.getElementById('modal-image').src = image;
-    document.getElementById('modal-name').textContent = name;
-    document.getElementById('modal-type').textContent = type;
-    document.getElementById('modal-details').textContent = details;
-
+function openModal() {
     // Display the modal
     document.getElementById('modal').style.display = "block";
 }
@@ -28,4 +15,49 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+function LoadCommentaire(element){
+    var sectionCommentaire = document.getElementById("modal");
+    sectionCommentaire.innerHTML = '<div class="modal-content">\n' +
+        '        <span class="close" onclick="closeModal()">&times;</span>\n' +
+        '        <div class="division-modal">\n' +
+        '            <div class="partie-modal">\n' +
+        '                <div class="division-detail">\n' +
+        '                    <div>\n' +
+        '                        <img id="modal-image" src="/images/logoCr.jpeg" alt="Image de la carte">\n' +
+        '                        <div class="carte-details">\n' +
+        '                            <h2 id="modal-name"></h2>\n' +
+        '                            <p id="modal-type"></p>\n' +
+        '                            <p>Rareté de carte\n' +
+        '                            <br><br>\n' +
+        '                        </div>\n' +
+        '                    </div>\n' +
+        '                    <div class="detail">\n' +
+        '                        <h3>Détail:</h3>\n' +
+        '                        <p id="modal-details"></p>\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '                <div class="add-comment">\n' +
+        '                    <h3>Ajouter votre avis:</h3>\n' +
+        '                    <textarea placeholder="Écrire l\'avis..."></textarea>\n' +
+        '                    <button>Ajouter</button>\n' +
+        '                </div>\n' +
+        '            </div>\n' +
+        '            <div class="partie-modal">\n' +
+        '                <div class="comments-section">\n' +
+        '                    <h3>Commentaire:</h3>\n' +
+        '                    <!-- Example response -->\n' +
+        '                    <div class="response">\n' +
+        '                        <p><strong>Utilisateur:</strong> Commentaire...</p>\n' +
+        '                    </div>\n' +
+        '                    <!-- Add more responses as needed -->\n' +
+        '                    <form class="add-Comment">\n' +
+        '                        <input type="text" placeholder="Ajouter commentaire">\n' +
+        '                        <button type="submit"  title="Cliquer pour ajouter commentaire.">Commenter</button>\n' +
+        '                    </form>\n' +
+        '                </div>\n' +
+        '            </div>\n' +
+        '        </div>\n' +
+        '    </div>'
 }
